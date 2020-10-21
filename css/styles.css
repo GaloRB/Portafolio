@@ -33,13 +33,13 @@ body {
 }
 
 .title h1 {
-    color: rgb(194, 191, 29);
+    color: rgb(29, 156, 194);
     font-size: 3rem;
     letter-spacing: 0.3rem;
     line-height: 5rem;
     margin: 0 auto;
     text-align: center;
-    text-shadow: 0.2rem 0.5rem 2rem #007025;
+    text-shadow: 0.2rem 0.5rem 2rem #00aa9c;
 }
 
 .typed-text h2 {
@@ -52,6 +52,6 @@ body {
 
 .img-container span {
     font-weight: 600;
-    color: rgb(194, 191, 29);
-    text-shadow: 0 0 1rem #00aa39;
+    color: rgb(29, 156, 194);
+    text-shadow: 0 0 1rem #00aa9c;
 }
