@@ -34,7 +34,7 @@ body {
 
 .title h1 {
     color: rgb(29, 156, 194);
-    font-size: 3rem;
+    font-size: 4rem;
     letter-spacing: 0.3rem;
     line-height: 5rem;
     margin: 0 auto;
@@ -43,7 +43,7 @@ body {
 }
 
 .typed-text h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     letter-spacing: 0.3rem;
     line-height: 5rem;
     margin: 0;
