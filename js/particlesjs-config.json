@@ -1,14 +1,14 @@
-particlesJS({
+{
     "particles": {
         "number": {
-            "value": 100,
+            "value": 80,
             "density": {
                 "enable": true,
                 "value_area": 800
             }
         },
         "color": {
-            "value": "#ffffff"
+            "value": "#d1d406"
         },
         "shape": {
             "type": "circle",
@@ -107,18 +107,4 @@ particlesJS({
         }
     },
     "retina_detect": true
-});
-
-
-const typed = new Typed('.typed', {
-    strings: ['<i>Galo Rodrigo</i>', '<i>Soy <br> Desarrollador<br> Web</i>'],
-    typeSpeed: 50,
-    startDelay: 300,
-    backSpeed: 50,
-    backDelay: 1500,
-    loop: true,
-    loopCount: false,
-    showCursor: true,
-    cursorChar: '|',
-    contentType: 'html'
-});
+}
