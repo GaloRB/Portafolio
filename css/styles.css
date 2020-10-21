@@ -24,7 +24,10 @@ body {
 
 .img-container {
     background-color: #1a1919;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    justify-content: center;
     position: relative;
     z-index: 99;
 }
@@ -35,7 +38,7 @@ body {
     letter-spacing: 0.3rem;
     line-height: 5rem;
     margin: 0 auto;
-    padding: 15rem 5rem 2rem 5rem;
+    text-align: center;
     text-shadow: 0.2rem 0.5rem 2rem #007025;
 }
 
@@ -44,7 +47,7 @@ body {
     letter-spacing: 0.3rem;
     line-height: 5rem;
     margin: 0;
-    padding: 0 5rem;
+    text-align: center;
 }
 
 .img-container span {
