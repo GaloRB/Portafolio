@@ -16,30 +16,25 @@ body {
 }
 
 .img-container {
-    align-items: center;
-    background-image: url(../img/pexels-instawalli-169789.jpg);
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: soft-light;
-    background-color: #1d1c1cce;
-    display: flex;
-    flex-direction: column;
+    background-color: #090b0e;
     height: 100vh;
-    justify-content: center;
 }
 
 .title h1 {
     color: rgb(192, 203, 207);
-    font-size: 4rem;
+    font-size: 3rem;
     letter-spacing: 0.3rem;
     line-height: 5rem;
+    margin: 0 auto;
+    padding: 8rem 5rem 2rem 5rem;
 }
 
 .typed-text h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     letter-spacing: 0.3rem;
     line-height: 5rem;
     margin: 0;
+    padding: 0 5rem;
 }
 
 .img-container span {
