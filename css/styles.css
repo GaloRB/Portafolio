@@ -32,12 +32,15 @@ body {
     z-index: 99;
 }
 
+.text-banner {
+    padding-bottom: 20rem;
+}
+
 .title h1 {
     color: rgb(29, 156, 194);
     font-size: 4rem;
     letter-spacing: 0.3rem;
     line-height: 5rem;
-    margin: 0 auto;
     text-align: center;
     text-shadow: 0.2rem 0.5rem 2rem #00aa9c;
 }
@@ -54,4 +57,42 @@ body {
     font-weight: 600;
     color: rgb(29, 156, 194);
     text-shadow: 0 0 1rem #00aa9c;
+}
+
+.hamburger {
+    color: rgb(29, 156, 194);
+    text-shadow: 0 0 1rem #00aa9c;
+    left: 2rem;
+    top: 2rem;
+    outline: none;
+    position: absolute;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-down {
+    position: absolute;
+}
+
+.button-down button {
+    background-color: transparent;
+    border: 1px solid #00aa9c;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem #00aa9c;
+    color: rgb(29, 156, 194);
+    font-size: 3rem;
+    text-shadow: 0 0 1rem #00aa9c;
+    transition: 0.4s ease;
+    outline: none;
+    padding: 2rem;
+}
+
+.button-down button:hover {
+    background-color: #51dace;
+    box-shadow: 0 0 3rem #00aa9c;
+    color: rgb(29, 45, 194);
 }

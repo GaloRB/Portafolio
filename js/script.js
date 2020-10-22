@@ -110,6 +110,8 @@ particlesJS({
 });
 
 
+
+
 const typed = new Typed('.typed', {
     strings: ['<i>Galo Rodrigo</i>', '<i>Soy <br> Desarrollador<br> Web</i>'],
     typeSpeed: 50,
