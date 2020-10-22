@@ -78,6 +78,11 @@ body {
     position: absolute;
 }
 
+.button-down a {
+    color: rgb(29, 156, 194);
+    transition: 0.4s ease;
+}
+
 .button-down button {
     background-color: transparent;
     border: 1px solid #00aa9c;
@@ -89,6 +94,10 @@ body {
     transition: 0.4s ease;
     outline: none;
     padding: 2rem;
+}
+
+.button-down a:hover {
+    color: rgb(29, 45, 194);
 }
 
 .button-down button:hover {
