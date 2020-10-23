@@ -14,6 +14,7 @@ html {
 body {
     background-color: #1a1919;
     font-family: 'Cabin', sans-serif;
+    user-select: none;
 }
 
 ::-webkit-scrollbar {
@@ -283,10 +284,15 @@ a:active {
 
 .burger-menu {
     top: 70.5rem;
-    position: absolute;
     padding-left: 2rem;
     cursor: pointer;
     transition: 0.4s ease-in;
+    z-index: 111;
+}
+
+.burger-menu-fixed {
+    position: fixed;
+    top: 1.8rem;
 }
 
 .line-1,
@@ -294,9 +300,9 @@ a:active {
 .line-3 {
     width: 3rem;
     height: 0.3rem;
-    background-color: white;
+    background-color: #e3eeed;
     margin: 0.6rem 1em;
-    transition: 0.1s ease-in;
+    transition: 0.1s ease;
 }
 
 .changeline-1 {
@@ -306,14 +312,50 @@ a:active {
 }
 
 .changeline-2 {
-    transition: 0.1s ease-in;
+    transition: 0.1s ease;
     opacity: 0;
 }
 
 .changeline-3 {
-    transition: 0.1s ease-in;
+    transition: 0.1s ease;
     transform: rotate(-46deg) translate(12px, -10px);
     position: absolute;
+}
+
+.frame-menu-mobile-full {
+    background-color: #4d9ebeef;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    /*position: absolute;*/
+    transition: 0.3s ease;
+}
+
+.nav-mobile {
+    display: none;
+}
+
+.nav-mobile-show {
+    display: block;
+}
+
+.nav-mobile a {
+    color: #e3eeed;
+    font-size: 4.5rem;
+    margin: 0 auto;
+}
+
+.nav-mobile ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-mobile li {
+    margin: 4rem;
 }
 
 
@@ -383,6 +425,7 @@ a:active {
     margin: 1.5rem;
     transform: rotate(0);
     transition: all 0.3s ease;
+    z-index: -1;
 }
 
 .tec:nth-child(7) {

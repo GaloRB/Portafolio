@@ -161,6 +161,9 @@
 }
 
 @media(min-width:1200px) {
+    .burger-menu {
+        display: none;
+    }
     .text-banner {
         display: flex;
         flex-direction: column;

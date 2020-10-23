@@ -142,6 +142,23 @@ const typed = new Typed('.typed', {
     contentType: 'html'
 });
 
+/*  ----- menu mobile ----- */
+
+let menuBurger = document.querySelector('#menu-burger');
+let line1 = document.querySelector('#line-1');
+let line2 = document.querySelector('#line-2');
+let line3 = document.querySelector('#line-3');
+let frameMenu = document.querySelector('.frame-menu-mobile');
+let navMobile = document.querySelector('.nav-mobile');
+menuBurger.addEventListener('click', () => {
+    line1.classList.toggle('changeline-1');
+    line2.classList.toggle('changeline-2');
+    line3.classList.toggle('changeline-3');
+    frameMenu.classList.toggle('frame-menu-mobile-full');
+    about.style.marginTop = '0';
+    navMobile.classList.toggle('nav-mobile-show');
+});
+
 
 // --------------  sticky menu ------------//
 
@@ -159,16 +176,19 @@ window.addEventListener('scroll', () => {
     }
 });
 
-/*  ----- menu mobile ----- */
+// --------------  sticky menu mobile ------------//
 
-let menuBurger = document.querySelector('#menu-burger');
-let line1 = document.querySelector('#line-1');
-let line2 = document.querySelector('#line-2');
-let line3 = document.querySelector('#line-3');
-menuBurger.addEventListener('click', () => {
-    line1.classList.toggle('changeline-1');
-    line2.classList.toggle('changeline-2');
-    line3.classList.toggle('changeline-3');
+
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > altura) {
+        menuBurger.classList.add('burger-menu-fixed');
+        about.style.marginTop = '7rem';
+    } else {
+        menuBurger.classList.remove('burger-menu-fixed');
+        about.style.marginTop = '0';
+
+    }
 });
 
 
