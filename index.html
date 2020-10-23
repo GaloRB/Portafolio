@@ -13,15 +13,10 @@
     <title>Portafolio</title>
 </head>
 
-<body>
+<body id="body" class="hidden-scroll">
 
     <div class="img-container">
-        <!--<button class="hamburger hamburger--emphatic" type="button">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
-        -->
+
         <div id="particles-js">
             <div class="text-banner">
                 <div class="title">
@@ -35,7 +30,7 @@
             </div>
 
 
-            <div class="button-down">
+            <div id="btn" class="button-down">
                 <button><a href="#about"><i class="fas fa-arrow-down"></i></a></button>
             </div>
 
@@ -45,27 +40,37 @@
 
 
     <section id="about" class="dark-content">
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre mí</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Trabajos</a></li>
+                <li><a href="#">Contacto</a></li>
+
+            </ul>
+        </nav>
         <div class="title-container">
 
-            <div class="about-title">
+            <div class="about-title animacion-derecha">
                 <h3>Sobre Mí</h3>
             </div>
-            <div class="icon">
+            <div id="icon-about" class="icon animacion-izquierda">
                 <i class="fas fa-user"></i>
             </div>
         </div>
         <div class="text-container">
             <p class="text">Como ya habrás visto, mi nombre es Galo Rodrigo, vivo en México, soy desarrollador web y estoy por terminar la carrera de Ingenieria en Tecnologías De Información.</p>
-            <p class="text">Siempre me a gustado todo lo relacionado a la tecnologia y desde que conocí el mundo de la programacón trato de aprender más y más, espero algún día poder hacer un gran aporte para el mundo del desarrollo.</p>
+            <p class="text">Siempre me a gustado todo lo relacionado a la tecnologia y desde que conocí el mundo de la programacón trato de aprender más y más, espero algún día poder hacer un gran aporte para el mundo del tecnológico.</p>
         </div>
     </section>
 
     <section id="knoledge" class="dark-content">
         <div class="title-container">
-            <div class="icon">
+            <div id="icon-knowledge" class="icon animacion-derecha">
                 <i class="fas fa-code"></i>
             </div>
-            <div class="knoledge-title">
+            <div class="knoledge-title animacion-izquierda">
                 <h3>Habilidades</h3>
             </div>
         </div>

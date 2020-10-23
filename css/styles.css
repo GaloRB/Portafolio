@@ -16,12 +16,125 @@ body {
     font-family: 'Cabin', sans-serif;
 }
 
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #1a1919;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(29, 156, 194);
+    border-radius: 5px;
+    box-shadow: 0.2rem 0.5rem 2rem #00aa9c;
+}
+
+.hidden-scroll {
+    overflow-y: hidden;
+}
+
 h1,
 h2,
 h3,
 h4,
 p {
     margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+
+/* ---------------- animaciones ----------------------*/
+
+.animacion-arriba {
+    opacity: 0;
+    transition: all 0.7s;
+}
+
+.animacion-arriba-servicios {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.animacion-abajo {
+    opacity: 0;
+    transition: all 0.7s;
+}
+
+.animacion-abajo-servicios {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.animacion-derecha {
+    opacity: 0;
+    transition: all 0.7s;
+}
+
+.animacion-izquierda {
+    opacity: 0;
+    transition: all 0.7s;
+}
+
+.mostrar-arriba {
+    animation: mostrar-arriba 1s;
+}
+
+@keyframes mostrar-arriba {
+    0% {
+        transform: translateY(7rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.mostrar-abajo {
+    animation: mostrar-abajo 1s;
+}
+
+@keyframes mostrar-abajo {
+    0% {
+        transform: translateY(-7rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.mostrar-derecha {
+    animation: mostrar-derecha 1s;
+}
+
+@keyframes mostrar-derecha {
+    0% {
+        transform: translateX(9rem);
+    }
+    100% {
+        transform: translateX(0rem);
+    }
+}
+
+.mostrar-izquierda {
+    animation: mostrar-izquierda 1s;
+}
+
+@keyframes mostrar-izquierda {
+    0% {
+        transform: translateX(-9rem);
+    }
+    100% {
+        transform: translateX(0rem);
+    }
 }
 
 
@@ -71,15 +184,6 @@ p {
     font-weight: 600;
     color: rgb(29, 156, 194);
     text-shadow: 0 0 1rem #00aa9c;
-}
-
-.hamburger {
-    color: rgb(29, 156, 194);
-    text-shadow: 0 0 1rem #00aa9c;
-    left: 2rem;
-    top: 2rem;
-    outline: none;
-    position: absolute;
 }
 
 .button-down {
