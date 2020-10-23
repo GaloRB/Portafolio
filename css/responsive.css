@@ -81,6 +81,9 @@
 }
 
 @media(min-width:960px) and (max-width:1199px) {
+    .burger-menu {
+        display: none;
+    }
     .title h1 {
         font-size: 6rem;
         margin-top: 2rem;
@@ -101,6 +104,20 @@
         transition: 0.4s ease;
         outline: none;
         padding: 3rem;
+    }
+    .nav {
+        display: block;
+        padding: 0.5rem 10rem;
+        background-color: #d0e6e415;
+    }
+    .nav ul {
+        display: flex;
+        font-size: 2.5rem;
+        justify-content: space-around;
+        padding: 0;
+    }
+    .nav a {
+        color: #00aa9c;
     }
     .about-title {
         display: inline-block;
@@ -153,6 +170,7 @@
     .title {
         margin: 5rem 0;
         display: flex;
+        justify-content: center;
     }
     .title h1 {
         font-size: 6rem;
@@ -162,7 +180,7 @@
     .typed-text h2 {
         font-size: 8rem;
         letter-spacing: 0.5rem;
-        line-height: 7rem;
+        line-height: 10rem;
         text-align: center;
     }
     .button-down button {
@@ -170,9 +188,9 @@
         padding: 3rem;
     }
     .nav {
-        padding: 0.5rem 10rem;
         background-color: #d0e6e415;
-        position: fixed;
+        display: block;
+        padding: 0.5rem 10rem;
     }
     .nav ul {
         display: flex;

@@ -5,7 +5,14 @@ arrowBtn.addEventListener('click', () => {
     addScroll.classList.remove('hidden-scroll');
 });
 
+/* color de scrollbar */
+let progress = document.querySelector('#progresbar');
+let totalHeight = document.body.scrollHeight - window.innerHeight;
 
+window.onscroll = function() {
+    let progressHeight = (window.pageYOffset / totalHeight) * 100;
+    progress.style.height = progressHeight + '%';
+}
 
 // ------ script de particulas ----------------//
 
@@ -135,7 +142,37 @@ const typed = new Typed('.typed', {
     contentType: 'html'
 });
 
-// ------------------------------------------- funciones de animacion de scroll ------------------------------------------//
+
+// --------------  sticky menu ------------//
+
+let about = document.querySelector('#about');
+let nav = document.querySelector('#nav');
+let altura = nav.offsetTop;
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > altura) {
+        nav.classList.add('fixed');
+        about.style.marginTop = '7rem';
+    } else {
+        nav.classList.remove('fixed');
+        about.style.marginTop = '0';
+
+    }
+});
+
+/*  ----- menu mobile ----- */
+
+let menuBurger = document.querySelector('#menu-burger');
+let line1 = document.querySelector('#line-1');
+let line2 = document.querySelector('#line-2');
+let line3 = document.querySelector('#line-3');
+menuBurger.addEventListener('click', () => {
+    line1.classList.toggle('changeline-1');
+    line2.classList.toggle('changeline-2');
+    line3.classList.toggle('changeline-3');
+});
+
+
+// ------------------------------------------- funciones de animacion ------------------------------------------//
 let animacion = document.querySelectorAll(".animacion-arriba");
 
 function mostrarScroll() {
