@@ -150,8 +150,17 @@ let line2 = document.querySelector('#line-2');
 let line3 = document.querySelector('#line-3');
 let frameMenu = document.querySelector('.frame-menu-mobile');
 let navMobile = document.querySelector('.nav-mobile');
+let hidde = document.querySelector('#hidden');
 
 menuBurger.addEventListener('click', () => {
+    line1.classList.toggle('changeline-1');
+    line2.classList.toggle('changeline-2');
+    line3.classList.toggle('changeline-3');
+    navMobile.classList.toggle('active');
+
+});
+
+hidde.addEventListener('click', () => {
     line1.classList.toggle('changeline-1');
     line2.classList.toggle('changeline-2');
     line3.classList.toggle('changeline-3');
