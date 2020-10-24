@@ -1,9 +1,9 @@
 // --------- quitar scroll a inicio --------------//
-let arrowBtn = document.querySelector('#btn');
+/*let arrowBtn = document.querySelector('#btn');
 let addScroll = document.querySelector('body');
 arrowBtn.addEventListener('click', () => {
     addScroll.classList.remove('hidden-scroll');
-});
+});*/
 
 /* color de scrollbar */
 let progress = document.querySelector('#progresbar');
@@ -150,13 +150,13 @@ let line2 = document.querySelector('#line-2');
 let line3 = document.querySelector('#line-3');
 let frameMenu = document.querySelector('.frame-menu-mobile');
 let navMobile = document.querySelector('.nav-mobile');
+
 menuBurger.addEventListener('click', () => {
     line1.classList.toggle('changeline-1');
     line2.classList.toggle('changeline-2');
     line3.classList.toggle('changeline-3');
-    frameMenu.classList.toggle('frame-menu-mobile-full');
-    about.style.marginTop = '0';
-    navMobile.classList.toggle('nav-mobile-show');
+    navMobile.classList.toggle('active');
+
 });
 
 
