@@ -12,75 +12,11 @@ html {
 }
 
 body {
-    background-color: #1a1919;
-    font-family: 'Cabin', sans-serif;
+    background-color: black;
+    font-family: 'Jura', sans-serif;
     user-select: none;
+    overflow-wrap: anywhere;
 }
-
-::-webkit-scrollbar {
-    width: 0;
-}
-
-#scrollPath {
-    background: rgba(255, 255, 2555, 0.5);
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 5px;
-}
-
-#progresbar {
-    animation: animate 5s linear infinite;
-    background: linear-gradient(to top, #023b6d, #033833);
-    right: 0;
-    top: 0;
-    position: fixed;
-    width: 5px;
-}
-
-@keyframes animate {
-    0%,
-    100% {
-        filter: hue-rotate(0deg);
-    }
-    50% {
-        filter: hue-rotate(360deg);
-    }
-}
-
-#progresbar::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, #008aff, #01695f);
-    filter: blur(5px);
-}
-
-#progresbar::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, #07253f, #00ffe7);
-    filter: blur(30px);
-}
-
-
-/*::-webkit-scrollbar-track {
-    background-color: #1a1919;
-    box-shadow: 0.2rem 0.5rem 2rem #00aa9c;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgb(29, 156, 194);
-    border-radius: 5px;
-}*/
 
 h1,
 h2,
@@ -100,11 +36,18 @@ a:active {
     text-decoration: none;
 }
 
-.fixed {
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #1a1919;
+    box-shadow: 0.2rem 0.5rem 2rem #00aa9c;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(29, 156, 194);
+    border-radius: 5px;
 }
 
 
@@ -207,28 +150,26 @@ a:active {
 }
 
 .text-banner {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10rem;
+    margin-top: 4rem;
     position: absolute;
 }
 
-.title {
+.title h1 {
+    color: #5552f3;
+    font-size: 4rem;
+    letter-spacing: 0.3rem;
+    line-height: 5rem;
+    margin: 1rem;
     text-align: center;
 }
 
-.title h1 {
-    color: rgb(29, 156, 194);
-    font-size: 3.5rem;
-    letter-spacing: 0.3rem;
-    line-height: 5rem;
-    text-align: center;
-    text-shadow: 0.2rem 0.5rem 2rem #00aa9c;
-    margin: 1rem;
+.typed-text {
+    position: absolute;
+    top: 30%;
 }
 
 .typed-text h2 {
-    font-size: 5rem;
+    font-size: 3.5rem;
     letter-spacing: 0.3rem;
     line-height: 6rem;
     margin: 0;
@@ -237,8 +178,7 @@ a:active {
 
 .img-container span {
     font-weight: 600;
-    color: rgb(29, 156, 194);
-    text-shadow: 0 0 1rem #00aa9c;
+    color: #5552f3;
 }
 
 .button-down {
@@ -248,47 +188,53 @@ a:active {
 }
 
 .button-down a {
-    color: rgb(29, 156, 194);
+    color: #5552f3;
     transition: 0.4s ease;
 }
 
 .button-down button {
     background-color: transparent;
-    border: 1px solid #00aa9c;
+    border: 1px solid #5552f3;
     border-radius: 50%;
-    box-shadow: 0 0 1rem #00aa9c;
-    color: rgb(29, 156, 194);
+    box-shadow: 0 0 1rem #5552f3;
+    color: #5552f3;
     font-size: 3rem;
-    text-shadow: 0 0 1rem #00aa9c;
+    text-shadow: 0 0 1rem #5552f3;
     transition: 0.4s ease;
     outline: none;
     padding: 2rem;
 }
 
 .button-down a:hover {
-    color: rgb(29, 45, 194);
+    color: #080808;
 }
 
 .button-down button:hover {
-    background-color: #51dace;
-    box-shadow: 0 0 3rem #00aa9c;
-    color: rgb(29, 45, 194);
+    background-color: #3f3ce9;
+    box-shadow: 0 0 3rem #0358b9;
+    color: rgb(17, 38, 226);
 }
 
 
 /* ----- menu mobile --------*/
 
 .burger-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     top: 70.5rem;
-    padding-left: 2rem;
+    padding: 1rem 2rem;
     cursor: pointer;
     transition: 0.4s ease-in;
     z-index: 111;
+    background-color: #5552f3;
+    color: black;
 }
 
 .burger-menu-fixed {
     position: fixed;
-    top: 2rem;
+    top: 0;
+    width: 100%;
 }
 
 .line-1,
@@ -296,7 +242,7 @@ a:active {
 .line-3 {
     width: 3.5rem;
     height: 0.3rem;
-    background-color: #e3eeed;
+    background-color: black;
     margin: 0.6rem 1em;
     transition: 0.1s ease;
 }
@@ -330,7 +276,8 @@ a:active {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #0c887e;
+    height: 100vh;
+    background-color: #5552f3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -353,10 +300,17 @@ a:active {
 
 .nav-mobile ul li a {
     position: relative;
-    font-size: 4rem;
+    font-size: 3rem;
     padding: 2rem;
     color: #0f1111;
     display: inline-block;
+}
+
+.fixed {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 
@@ -367,25 +321,25 @@ a:active {
 }
 
 .dark-content {
-    color: #d0e6e4;
+    color: white;
 }
 
 .about-title {
     display: inline-block;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
     padding: 3rem 3rem 0.5rem 3rem;
-    border-bottom: 3px solid #00aa9c;
+    border-bottom: 3px solid #5552f3;
 }
 
 .text-container {
     text-align: center;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .text {
-    font-size: 1.7rem;
-    line-height: 2.3rem;
+    font-size: 2rem;
+    line-height: 3rem;
     letter-spacing: 1px;
     margin: 1rem;
 }
@@ -395,11 +349,11 @@ a:active {
 
 .knoledge-title {
     display: inline-block;
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 0;
     padding: 3rem 3rem 0.5rem 3rem;
     right: 6rem;
-    border-bottom: 3px solid #00aa9c;
+    border-bottom: 3px solid #5552f3;
 }
 
 .title-container {
@@ -409,20 +363,19 @@ a:active {
 }
 
 .icon {
-    color: #00aa9c;
+    color: #5552f3;
     font-size: 3rem;
     padding: 0 3rem;
 }
 
 .skills {
-    margin-top: 3rem;
     display: grid;
     grid-template-columns: 50% 50%;
     text-align: center;
 }
 
 .tec {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 1.5rem;
     transform: rotate(0);
     transition: all 0.3s ease;
@@ -475,4 +428,81 @@ a:active {
 #git:hover {
     color: #111110;
     text-shadow: 0 0 1.5rem #f0ebe5;
+}
+
+
+/* ---- services ----------*/
+
+.services-container__title {
+    border-bottom: 3px solid #5552f3;
+    color: white;
+    font-size: 2.5rem;
+    margin: 2rem 10rem;
+    text-align: center;
+}
+
+.card {
+    background-color: rgb(2, 2, 2);
+    box-shadow: 0 0 1.5rem #5552f3;
+    color: white;
+    margin: 3rem 3rem;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+}
+
+.card-hover {
+    background-color: #5552f3;
+    box-shadow: 0 0 2.5rem #bab9f1;
+}
+
+.card__icon img {
+    margin-top: 2.2rem;
+    width: 100%;
+    max-height: 8rem;
+    object-fit: contain;
+}
+
+.card__title {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+
+.line {
+    margin: 2rem 10rem;
+    height: 0.1rem;
+    text-shadow: 0 0 1.5rem #5552f3;
+    background-color: #5552f3;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.card__text {
+    font-size: 1.6rem;
+    padding: 0 2rem 2rem;
+    text-align: justify;
+}
+
+.card button {
+    margin: 2rem 2rem;
+    border: 1px solid #5552f3;
+    box-shadow: 0 0 1.5rem #5552f3;
+    background-color: transparent;
+    padding: 0.8rem;
+    border-radius: 5px;
+    width: 50%;
+}
+
+.button-hover button {
+    border: 1px solid #5552f3;
+    box-shadow: 0 0 1.5rem #c5c4f0;
+    background-color: rgba(0, 0, 0, 0.596);
+}
+
+.card button>a {
+    font-size: 1.6rem;
+    color: white;
 }

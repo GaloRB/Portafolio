@@ -1,32 +1,16 @@
-// --------- quitar scroll a inicio --------------//
-/*let arrowBtn = document.querySelector('#btn');
-let addScroll = document.querySelector('body');
-arrowBtn.addEventListener('click', () => {
-    addScroll.classList.remove('hidden-scroll');
-});*/
-
-/* color de scrollbar */
-let progress = document.querySelector('#progresbar');
-let totalHeight = document.body.scrollHeight - window.innerHeight;
-
-window.onscroll = function() {
-    let progressHeight = (window.pageYOffset / totalHeight) * 100;
-    progress.style.height = progressHeight + '%';
-}
-
 // ------ script de particulas ----------------//
 
 particlesJS({
     "particles": {
         "number": {
-            "value": 100,
+            "value": 60,
             "density": {
                 "enable": true,
                 "value_area": 800
             }
         },
         "color": {
-            "value": "#00aa9c"
+            "value": "#000000"
         },
         "shape": {
             "type": "circle",
@@ -130,7 +114,7 @@ particlesJS({
 //  ---------------- script de typed.js --------------//
 
 const typed = new Typed('.typed', {
-    strings: ['<i>Galo Rodrigo</i>', '<i>Soy <br> Desarrollador<br> Web</i>'],
+    strings: ['Me llamo <br>Galo Rodrigo', 'Soy <br> Desarrollador<br> Web'],
     typeSpeed: 50,
     startDelay: 300,
     backSpeed: 50,
@@ -151,12 +135,15 @@ let line3 = document.querySelector('#line-3');
 let frameMenu = document.querySelector('.frame-menu-mobile');
 let navMobile = document.querySelector('.nav-mobile');
 let hidde = document.querySelector('#hidden');
+let logo = document.querySelector('#logo');
 
 menuBurger.addEventListener('click', () => {
     line1.classList.toggle('changeline-1');
     line2.classList.toggle('changeline-2');
     line3.classList.toggle('changeline-3');
     navMobile.classList.toggle('active');
+    menuBurger.classList.toggle('background-nav');
+
 
 });
 
@@ -166,7 +153,25 @@ hidde.addEventListener('click', () => {
     line3.classList.toggle('changeline-3');
     navMobile.classList.toggle('active');
 
+    logo.style.display = 'block'
+
 });
+
+
+/*----------- preuba ocultar menu ----------*/
+let ubicacionPrincipal = window.pageYOffset;
+window.onscroll = function() {
+    let desplazamiento = window.pageYOffset;
+    if (ubicacionPrincipal >= desplazamiento) {
+        menuBurger.style.top = '0';
+        nav.style.top = '0';
+    } else {
+        menuBurger.style.top = '-100px';
+        nav.style.top = '-100px';
+    }
+    ubicacionPrincipal = desplazamiento;
+}
+
 
 
 // --------------  sticky menu ------------//
@@ -177,11 +182,10 @@ let altura = nav.offsetTop;
 window.addEventListener('scroll', () => {
     if (window.pageYOffset > altura) {
         nav.classList.add('fixed');
-        about.style.marginTop = '7rem';
+        nav.style.marginBottom = '1rem';
+
     } else {
         nav.classList.remove('fixed');
-        about.style.marginTop = '0';
-
     }
 });
 
@@ -192,7 +196,7 @@ window.addEventListener('scroll', () => {
 window.addEventListener('scroll', () => {
     if (window.pageYOffset > altura) {
         menuBurger.classList.add('burger-menu-fixed');
-        about.style.marginTop = '7rem';
+
     } else {
         menuBurger.classList.remove('burger-menu-fixed');
         about.style.marginTop = '0';
@@ -287,3 +291,35 @@ window.addEventListener('scroll', mostrarScroll2);
 window.addEventListener('scroll', mostrarScroll3);
 window.addEventListener('scroll', mostrarScroll4);
 window.addEventListener('scroll', mostrarScroll5);
+
+
+
+/* ----- animation cards ------*/
+
+
+let card = document.querySelectorAll('.card');
+let buttonCard = document.querySelectorAll('.button');
+for (let i = 0; i < card.length; i++) {
+    card[i].addEventListener('mouseenter', () => {
+        buttonchange();
+        card[i].classList.add('card-hover');
+
+
+    })
+    card[i].addEventListener('mouseleave', () => {
+        card[i].classList.remove('card-hover');
+    })
+
+}
+
+function buttonchange() {
+    for (let i = 0; i < card.length; i++) {
+        card[i].addEventListener('mouseenter', () => {
+            buttonCard[i].classList.add('button-hover');
+        })
+        card[i].addEventListener('mouseleave', () => {
+            buttonCard[i].classList.remove('button-hover');
+        })
+
+    }
+}

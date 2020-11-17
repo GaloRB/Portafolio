@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel="shortcut icon" type="image/ico" href="img/favicon-96x96.png">
     <script src="https://kit.fontawesome.com/e954e6d43f.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Portafolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@500;600;700&display=swap" rel="stylesheet">
+    <title>GR Web</title>
 </head>
 
-<body id="body" class="hidden-scroll">
+<body id="body">
     <div id="progresbar"></div>
     <div id="scrollPath"></div>
     <div class="img-container">
@@ -21,13 +25,13 @@
         <div id="particles-js">
             <div class="text-banner">
                 <div class="title">
-                    <H1>Hola!</h1>
-                    <h1>Me Llamo:</h1>
-                </div>
+                    <H1>Hola <br> Bienvenido!</h1>
 
-                <div class="typed-text">
-                    <h2><span class="typed"></span></h2>
+
                 </div>
+            </div>
+            <div class="typed-text">
+                <h2><span class="typed"></span></h2>
             </div>
 
 
@@ -43,18 +47,30 @@
     <section id="about" class="dark-content">
         <div class="menu-mobile-container">
             <div id="menu-burger" class="burger-menu">
-                <div id="line-1" class="line-1"></div>
-                <div id="line-2" class="line-2"></div>
-                <div id="line-3" class="line-3"></div>
+                <div class="barras">
+                    <div id="line-1" class="line-1"></div>
+                    <div id="line-2" class="line-2"></div>
+                    <div id="line-3" class="line-3"></div>
+                </div>
+
+                <div id="logo" class="logo">
+                    <h1>GR WEB</h1>
+                </div>
             </div>
+
         </div>
 
         <nav id="nav" class="nav">
+
+            <div class="logo">
+                <h1>GR WEB</h1>
+            </div>
             <ul>
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Sobre mí</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Trabajos</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#knoledge">Tecnologías</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#">Proyectos</a></li>
                 <li><a href="#">Contacto</a></li>
 
             </ul>
@@ -64,9 +80,10 @@
         <nav id="nav-mobile" class="nav-mobile">
             <ul id="hidden">
                 <li><a href="#">Inicio</a></li>
-                <li><a href="#">Sobre mí</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Trabajos</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#knoledge">Tecnologías</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#">Proyectos</a></li>
                 <li><a href="#">Contacto</a></li>
 
             </ul>
@@ -87,17 +104,18 @@
         </div>
     </section>
 
+
     <section id="knoledge" class="dark-content">
         <div class="title-container">
             <div id="icon-knowledge" class="icon animacion-derecha">
                 <i class="fas fa-code"></i>
             </div>
             <div class="knoledge-title animacion-izquierda">
-                <h3>Habilidades</h3>
+                <h3>Tecnologías</h3>
             </div>
         </div>
         <div class="text-container animacion-arriba">
-            <p class="text">Hasta el momento estas son las tecnoligias que conozco y con las que puedo trabajar:</p>
+            <p class="text">Hasta el momento estas son las tecnoligias que conozco y con las que puedo trabajar, pero diario me mantengo en constante estudio y practica para ir mejorando mi stack o tecnologías de trabajo.</p>
             <div id="skills" class="skills">
                 <div id="html" class="tec">
                     <i class="fab fa-html5"></i>
@@ -128,10 +146,75 @@
                     <p>GitHub</p>
                 </div>
             </div>
-
-
         </div>
     </section>
+
+
+    <section id="services" class="services-container">
+        <div class="services-container__title">
+            <h3>Servicios</h3>
+        </div>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card__icon">
+                    <img src="icon/sitio-web.svg" alt="">
+                </div>
+                <div class="line">
+                    <span></span>
+                </div>
+                <div class="card__title">
+                    <h2>Páginas Web</h2>
+                </div>
+                <div class="card__text">
+                    <p>Realizo diseño y desarrollo de páginas web con base en un levantamiento previo de requerimientos y analis del problema para poder brindarte la mejor opción en cuanto a tu desarrollo.</p>
+                </div>
+                <div class="button">
+                    <button><a href="#">Saber más</a></button>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card__icon">
+                    <img src="icon/analisis.svg" alt="">
+                </div>
+                <div class="line">
+                    <span></span>
+                </div>
+                <div class="card__title">
+                    <h2>SEO</h2>
+                </div>
+                <div class="card__text">
+                    <p>Aplico técnicas de analisis, para poder optimizar tu web y mejorar su posicionamiento en los principales buscadores de internet.</p>
+                </div>
+                <div class="button">
+                    <button><a href="#">Saber más</a></button>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card__icon">
+                    <img src="icon/mantenimiento-web.svg" alt="">
+                </div>
+                <div class="line">
+                    <span></span>
+                </div>
+                <div class="card__title">
+                    <h2>Mantenimietno</h2>
+                </div>
+                <div class="card__text">
+                    <p>Si tienes tu pagina web pero sientes que algo no funciona como esperabas o deseas un rediseño no dudes en contactarme. </p>
+                </div>
+                <div class="button">
+                    <button><a href="#">Saber más</a></button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="js/script.js"></script>
